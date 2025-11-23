@@ -145,7 +145,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 3px;
     margin-top: 40px;
     font-size: 0.85rem;
     text-align: center;
@@ -840,6 +840,7 @@ p {
 
     footer {
     margin-left: 120px;
+    gap: 10px;
 }
 
     /* -------end of skymirror wide-------- */
