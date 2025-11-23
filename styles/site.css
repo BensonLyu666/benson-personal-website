@@ -135,6 +135,10 @@ section {
     margin-top: 24px;
 }
 
+.opening {
+    margin-top: 30px;
+}
+
 footer {
     display: flex;
     flex-direction: column;
