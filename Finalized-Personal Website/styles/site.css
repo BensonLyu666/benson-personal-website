@@ -1,0 +1,899 @@
+/* -------------start of general setting---------------  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* narrow的时候不显示菜单栏而是汉堡 */
+.nav-section {
+    display: none;
+}
+
+/* 左边进度条narrow关闭 */
+.toc-nav {
+    display: none;
+}
+
+/* ------------------------------------- */
+/* 汉堡按钮，更多我的介绍按钮，关闭modal叉叉的基本美观信息 */
+.hamburger-btn,
+.modal-trigger,
+.close-x-button {
+    display: block;
+    background-color: white;
+    border: 1px solid black;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* 汉堡按钮更新 */
+.hamburger-btn {
+    padding: 6px 8px 8px 10px;
+}
+
+/* 汉堡菜单栏 */
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    gap: 10px;
+}
+
+/* modal的hidden */
+.hidden {
+    display: none !important;
+}
+
+/* 更多我的介绍按钮 */
+.modal-trigger {
+    margin-top: 15px;
+    font-size: 13px;
+    font-family: "Avenir", "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* modal后面变虚化的背景 */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ;
+}
+
+/* modal的页面 */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    max-width: 70%;
+    background: white;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+/* 关闭modal的叉叉的位置 */
+.close-x-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----------------------------------- */
+
+body {
+    font-family: "Avenir", "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 65px;
+    line-height: 1.5;
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 12px;
+}
+
+ul {
+    margin-left: 30px;
+}
+
+.light-heading3 {
+    font-weight: normal;
+}
+
+section {
+    margin-top: 24px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 70px;
+}
+
+.icon-wrap img {
+    max-width: 30px;
+}
+
+img {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+    border-radius: 8px;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 6px;
+}
+
+/* -------------end of general setting---------------  */
+
+
+/* -------------start of navigation bar---------------  */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo-img {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 2px;
+    height: 35px;
+    width: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-section a {
+    margin-left: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-section a:hover {
+    text-decoration: underline;
+}
+
+/* -------------end of navigation bar---------------  */
+
+
+
+
+/* -------------start of projects general---------------  */
+.project-card1,
+.project-card2,
+.project-card3 {
+    border: 1px solid #d3cfcf;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 16px;
+    margin-top: 60px;
+}
+
+.project-card1 {
+    margin-top: 20px;
+}
+
+.project-card1 img,
+.project-card2 img,
+.project-card3 img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+article p,
+.project-card3 p {
+    color: rgb(132, 122, 122);
+    font-size: 0.9rem;
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 5px 8px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.project-info {
+    /* to TAs: ive tried flex so many times but only grid can have such organized effect. early this semester i went to professors OH and learnt this knowledge. */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 24px 0;
+}
+
+.info-block h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.info-block p {
+    margin: 3px 0;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* -------------end of projects general---------------  */
+
+
+
+
+/* -------------start of project 1---------------  */
+
+.hvac-problem,
+.hvac-why-matter,
+.hvac-initial-ideation,
+.hvac-problems-encountered,
+.hvac-solution,
+.hvac-reflection {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hvac-problem p,
+.hvac-why-matter p,
+.hvac-initial-ideation p,
+.hvac-problems-encountered p,
+.hvac-solution p,
+.hvac-reflection p {
+    margin-top: 2px;
+}
+
+.hvac-problem h2,
+.hvac-why-matter h2,
+.hvac-initial-ideation h2,
+.hvac-problems-encountered h2,
+.hvac-solution h2,
+.hvac-reflection h2 {
+    margin-top: 60px;
+    border-bottom: 1px solid rgb(174, 171, 171);
+}
+
+.hvac-initial-ideation-figures {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hvac-initial-ideation h4,
+.hvac-solution h4 {
+    margin-top: 12px;
+}
+
+/* -------------end of project 1---------------  */
+
+
+
+
+
+/* -------------start of project 2---------------  */
+.skymirror-benson-profile,
+.skymirror-estrella-profile,
+.skymirror-kevin-profile,
+.skymirror-mike-profile,
+.skymirror-neil-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.skymirror-page-overview h4,
+.skymirror-design-framework h4,
+.skymirror-usp h4,
+.skymirror-difficulties h4 {
+    margin-top: 30px;
+}
+
+.skymirror-teamwork h2,
+.skymirror-design-framework h2,
+.skymirror-usp h2,
+.skymirror-difficulties h2 {
+    color: rgb(0, 0, 0);
+    margin-top: 100px;
+    border-bottom: 1px solid grey;
+}
+
+/* .skymirror-teamwork img {
+    max-width: 500px;
+} */
+
+.skymirror-design-framework h4 {
+    margin-bottom: 8px;
+}
+
+.skymirror-picseperate {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* -------------end of project 2---------------  */
+
+
+
+
+/* -------------start of project 3---------------  */
+.gs-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.gs-picseperate {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.gs-picseperate2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.chat-container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.bubble {
+    max-width: 80%;
+    padding: 12px 16px;
+    margin: 10px 0;
+    border-radius: 12px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.q {
+    background: #f2f7ff;
+    border: 1px solid #a4c7ff;
+    text-align: left;
+    margin-right: auto;
+}
+
+.a {
+    background: #e6f9f0;
+    border: 1px solid #7ed9b5;
+    text-align: left;
+    margin-left: auto;
+}
+
+.label {
+    font-weight: 600;
+    margin-right: 6px;
+    color: #555;
+}
+
+.gs-conversation {
+    margin-top: 20px;
+}
+
+.reflection-notes {
+    padding: 20px;
+}
+
+.reflection-notes h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.note {
+    background-color: #93b6da;
+    /* Goldman Sachs blue */
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    color: white;
+    /* make text readable on blue */
+}
+
+.note h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    margin-bottom: 6px;
+    color: white;
+}
+
+.note p,
+.note ul {
+    font-size: 0.95rem;
+    margin: 0;
+    color: white;
+}
+
+.note ul {
+    padding-left: 18px;
+}
+
+/* -------------end of project 3---------------  */
+
+
+
+
+
+/* -------------start of About---------------  */
+.about-intro img {
+    margin-bottom: 15px;
+
+}
+
+.about-intro-logos {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    max-width: 700px;
+}
+
+.year-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #355caa;
+    /* margin-left: -65px; */
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.timeline-section {
+    margin-top: 50px;
+}
+
+.timeline-title {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.timeline {
+    border-left: 3px dashed #aac6f5;
+    margin-left: 20px;
+    padding-left: 21px;
+}
+
+.entry {
+    position: relative;
+    margin-bottom: 25px;
+    padding-left: 10px;
+}
+
+.entry h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.entry p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #4d8ae8;
+    border-radius: 50%;
+    position: absolute;
+    left: -28px;
+    top: 5px;
+}
+
+
+
+/* Awards table */
+#awards {
+    margin-top: 28px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.awards-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.awards-table th,
+.awards-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: left;
+    vertical-align: top;
+}
+
+.awards-table thead th {
+    background: #f7f9fc;
+    font-weight: 600;
+}
+
+.awards-table tbody tr:hover {
+    background: #fafcff;
+}
+
+.badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: #eef3ff;
+    color: #2b5fb8;
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.about-awards-title {
+    margin-bottom: 20px;
+}
+
+.about-uwc-summary h2,
+.about-cornell-summary h2,
+.timeline-section h2,
+.persona-section h2,
+#awards h2 {
+    margin-top: 90px;
+}
+
+.persona-section h2 {
+    margin-bottom: 20px;
+}
+
+.persona-section img {
+    max-width: 580px;
+}
+
+.persona-card {
+    margin-bottom: 50px;
+}
+
+.persona-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.category {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #8a8a8a;
+    letter-spacing: 1.5px;
+}
+
+.persona-text h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 8px 0;
+}
+
+.persona-text p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* -------------end of About---------------  */
+
+
+/* -------------start of MyMusic---------------  */
+.music-section {
+    margin-top: 32px;
+}
+
+.music-title {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+}
+
+.music-sub {
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.music-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    flex-wrap: wrap;
+}
+
+.music-text {
+    flex: 1 1 280px;
+    min-width: 240px;
+}
+
+.music-text h3 {
+    margin-bottom: 6px;
+    font-size: 1.2rem;
+}
+
+.music-text p {
+    color: #555;
+}
+
+.music-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 10px;
+    border: 1px solid #111;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #111;
+    font-size: 0.92rem;
+}
+
+/* .music-btn:hover {
+    background: #111;
+    color: #fff;
+} */
+
+/* -------------end of MyMusic---------------  */
+
+
+
+/* -------------start of Resume---------------  */
+.resume-myresume {
+    border: 1px solid rgb(169, 169, 169);
+    margin-top: 30px;
+    border-radius: 15px;
+}
+
+/* -------------end of Resume---------------  */
+
+
+/* ----------------------MEDIA QUERIES LINE------------------------- */
+
+
+/* -------start of of left topic tracker-------- */
+@media (min-width: 1000px) {
+
+    /* hamburger menu */
+    .hamburger-btn {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .nav-section {
+        display: block;
+    }
+
+    /* hamburger menu */
+
+    .toc-nav {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 120px;
+        width: 240px;
+        padding: 20px;
+        border-right: 1px solid #d8d8d8;
+        height: 80vh;
+    }
+
+    .toc-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .toc-nav li {
+        margin-bottom: 14px;
+    }
+
+    .toc-nav a {
+        color: #2c4da3;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    .toc-nav a {
+        color: #19307b;
+    }
+
+    .wide-main {
+        margin-left: 150px;
+        margin-right: 60px;
+        padding-left: 20px;
+    }
+
+    .wide-main h3 {
+        scroll-margin-top: 110px;
+    }
+
+    .wide-main img {
+        scroll-margin-top: 80px;
+    }
+
+    .wide-main section {
+        scroll-margin-top: 70px;
+    }
+
+    .wide-main article {
+        scroll-margin-top: 60px;
+    }
+
+    #milestone {
+        scroll-margin-top: 80px;
+    }
+
+    /* -------start of skymirror wide-------- */
+    .skymirror-benson-profile,
+    .skymirror-estrella-profile,
+    .skymirror-kevin-profile,
+    .skymirror-mike-profile,
+    .skymirror-neil-profile {
+        align-items: flex-start;
+    }
+
+    .sky-smallpic {
+        max-width: 600px;
+    }
+
+    footer {
+    margin-left: 120px;
+}
+
+    /* -------end of skymirror wide-------- */
+
+}
+
+/* -------end of left topic tracker-------- */
+
+
+
+/* adding pointer response */
+
+@media (pointer: coarse) {
+
+    a,
+    button {
+        padding: 12px 16px !important;
+        font-size: 1.1rem;
+    }
+
+    .hamburger-btn {
+        padding: 14px 18px;
+        font-size: 32px;
+    }
+
+    .hamburger-menu a {
+        padding: 12px 0;
+        font-size: 1.1rem;
+    }
+
+    .nav-section a {
+        padding: 12px 14px;
+        font-size: 1.15rem;
+    }
+
+    .modal-trigger {
+        padding: 14px 18px;
+        font-size: 1.15rem;
+    }
+
+    .modal {
+        padding: 24px;
+    }
+
+    .close-x-button {
+        width: 48px;
+        height: 48px;
+        font-size: 26px;
+    }
+}
+
+@media (pointer: fine) {
+
+    button {
+        padding: 6px 8px;
+        font-size: 1rem;
+    }
+}
+
+
+
+/* adding pointer response */

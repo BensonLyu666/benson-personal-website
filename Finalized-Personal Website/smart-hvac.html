@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benson Lyu</title>
+    <link rel="stylesheet" href="styles/site.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo">
+            <!-- Source: original work by Benson Lyu -->
+            <img src="/images/homepage-logo.png" alt="Benson Lyu" class="logo-img">
+        </a>
+        <nav class="nav-section">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="mymusic.html">MyMusic</a>
+        </nav>
+
+        <!-- adding new hamburger button -->
+        <button id="hamburger-btn" class="hamburger-btn">☰</button>
+
+        <nav id="hamburger-menu" class="hidden hamburger-menu">
+            <a href="index.html">Home</a>
+            <a href="smart-hvac.html">Project 1</a>
+            <a href="skymirror.html">Project 2</a>
+            <a href="goldman.html">Milestone</a>
+            <a href="about.html">About</a>
+            <a href="mymusic.html">MyMusic</a>
+        </nav>
+        <!-- adding new hamburger button -->
+    </header>
+    <div class="wide-main">
+        <nav class="toc-nav">
+            <ul>
+                <li><a href="#hvac-intro">Introduction</a></li>
+                <li><a href="#hvac-prob">The Problem</a></li>
+                <li><a href="#hvac-whymatter">Why It Matters</a></li>
+                <li><a href="#hvac-init">Initial Ideation</a></li>
+                <li><a href="#hvac-diff">Problems Encountered</a></li>
+                <li><a href="#hvac-sol">Our Solution</a></li>
+                <li><a href="#hvac-ref">Reflection & Looking Forward</a></li>
+            </ul>
+        </nav>
+        <main>
+            
+            <img src="images/hvac-page-top.png" alt="Smart HVAC Overall Design" id="hvac-intro">
+            <section class="hvac-page-overview">
+                <h1>Smart HVAC</h1>
+                <h3>Designing AI-powered home energy systems to accelerate heat-pump adoption and reduce 32% carbon emissions.</h3>
+                <p>Partnered with BlocPower, this project focused on reducing unnecessary heating and cooling energy waste across indoor environments using real-time sensor data and automated control logic. </p>
+
+                <section class="project-info">
+                    <div class="info-block">
+                        <h4>Role</h4>
+                        <p>Team Leader</p>
+                        <p>Backend SWE</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h4>Timeline</h4>
+                        <p>2023-2025</p>
+                        <p>@Cornell University</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h4>Team Members</h4>
+                        <p>Benson</p>
+                        <p>Liam</p>
+                        <p>Mckinsey</p>
+                        <p>Xiaolin</p>
+                        <p>Chloe</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h4>Skills</h4>
+                        <p>Python, R, Java, CAD Design</p>
+                        <p>Data Analysis</p>
+                        <p>Product Strategy</p>
+                        <p>Sustainability Modeling</p>
+                    </div>
+                </section>
+
+                <p>I led the product direction and core system logic, working with an engineering team to integrate motion, temperature, and air-quality sensors with a dynamic HVAC control model. My contribution centered on defining the data flow, building the decision logic, and validating energy-use patterns through prototype testing. </p>
+
+                <p>The system demonstrated measurable efficiency gains in pilot settings, showing potential to scale across campus buildings to support Cornell’s sustainability and decarbonization goals.</p>
+
+            </section>
+
+            <section class="hvac-problem" id="hvac-prob">
+                <h2>The Problem</h2>
+
+                <div>
+                    <h4>1. Challenge: Understanding Heat Pumps</h4>
+                    <p>Ithaca’s Green New Deal aims to electrify 6,000 buildings by 2030, but during community outreach I noticed a major barrier: homeowners struggle to visualize how air-source heat pumps fit into their homes—where units go, how many they need, and whether the investment pays off.</p>
+                </div>
+
+                <div>
+                    <h4>2. Barrier: Complexity & Decision Risk</h4>
+                    <p>The installation process seems technical, costly, and hard to understand without specialists. Most people rely entirely on contractors, which makes the adoption process intimidating and slow.</p>
+                </div>
+
+                <div>
+                    <h4>3. Constraint: Limited Technician Capacity</h4>
+                    <p>At the same time, a shortage of HVAC technicians drives up labor costs and consultation wait times. This creates hesitation and delays—especially for households who want clean energy upgrades but need more clarity and confidence before committing.</p>
+                </div>
+
+                <figure>
+                    <!-- Source: original work by Benson Lyu -->
+                    <img src="/images/hvac-group-presentation.png" alt="group presentation identifying problems">
+                    <figcaption style="font-size:0.9rem; color:#666; margin-top:6px;">
+                        Presenting Concerns to the Public
+                    </figcaption>
+                </figure>
+
+            </section>
+
+            <section class="hvac-why-matter" id="hvac-whymatter">
+                <h2>Why It Matters</h2>
+
+                <p>Without transparent and intuitive planning tools, electrification remains inaccessible.</p>
+
+                <div>
+                    <h4>The Root Cause</h4>
+                    <p>People are reluctant to commit to new technology when they cannot picture the result, understand the value, or trust the process. Every hesitant homeowner slows the city’s progress toward decarbonization.</p>
+                </div>
+
+                <div>
+                    <h4>Visions for Impact</h4>
+                    <p>For electrification to truly scale — and do so equitably — homeowners need clarity, confidence, and autonomy in the decision-making process. I wanted to build something that makes climate technology feel familiar, understandable, and empowering, rather than intimidating.</p>
+                </div>
+            </section>
+
+            <section class="hvac-initial-ideation" id="hvac-init">
+                <h2>Initial Ideation</h2>
+                <div>
+                    <h4>Stage 1: Information ≠ confidence.</h4>
+                    <p>Our team's first idea was simple: build a clean information portal explaining HVAC electrification, financial incentives, and heat-pump types. But during conversations with residents, I realized that information alone isn't enough. People didn’t just want knowledge — they wanted to see what electrification would look like in their own homes.</p>
+                    <div class="hvac-initial-ideation-figures">
+                        <figure>
+                            <!-- Source: Mitsubishi (handout) -->
+                            <img src="/images/hvac-data-collection2.png" alt="hvac data collection">
+                            <figcaption style="font-size:0.9rem; color:#666; margin-top:6px;">
+                                Data1, Too Complex for the Public | Source: <cite>Mitsubishi Electric 24000 BTU Heat Pump Data</cite>
+                            </figcaption>
+
+                        </figure>
+
+                        <figure>
+                            <!-- Source: Mitsubishi (handout) -->
+                            <img src="/images/hvac-data-collection3.png" alt="hvac data collection continued">
+                            <figcaption style="font-size:0.9rem; color:#666; margin-top:6px;">
+                                Data2, Few People Know How it Works | Source: <cite>Mitsubishi Electric 12000 BTU Heat Pump Data</cite>
+                            </figcaption>
+
+                        </figure>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Stage 2: Generic visuals ≠ real decisions.</h4>
+                    <p>The insight mentioned above shifted our concept toward a visual planning tool. We explored ideas like static diagrams, interactive floor-planning tools, and even printable “placement templates,” but each felt too abstract. Real homes are complex — different shapes, room volumes, insulation quality, and airflow needs. If the tool didn’t reflect those unique layouts, it wouldn't solve uncertainty.</p>
+
+                    <figure>
+                        <!-- Source: original work by Benson Lyu -->
+                        <img src="/images/hvac-data-collection1.png" alt="Data Collection">
+                        <figcaption style="font-size:0.9rem; color:#666; margin-top:6px;">
+                            Research Notes for Placement Templates
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div>
+                    <h4>Stage 3: Personalized modeling = adoption unlock.</h4>
+                    <p>That led us to the core concept: a mobile tool where users can scan their home, generate a 3D model, 
+                        and receive an optimized heat-pump configuration with visual placement and savings estimates. 
+                        This idea blended my interest in sustainability, design, and machine learning, 
+                        and it aligned closely with Ithaca’s workforce and electrification goals.</p>
+                    <div style="text-align: center;">
+                        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+                        <model-viewer src="images/hvac-roomCAD.glb" alt="3D model" auto-rotate camera-controls style="width: 100%; height: 400px;">
+                        </model-viewer>
+
+                        <p style="font-size: 0.9rem; color: #666; margin-top: 6px;">
+                            Drag to Interact! CAD scan of my room used for HVAC modeling</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hvac-problems-encountered" id="hvac-diff">
+                <h2>Problems Encountered</h2>
+
+                <div>
+                    <h4>1. Reliable Home Scanning & Dimension Capture</h4>
+                    <p>Consumer phones can scan rooms, but accuracy varies based on lighting, furniture, and user movement. We also needed a system to detect suitable wall space, understand airflow paths, and recommend heat-pump types without overwhelming the user. On top of that, we needed to communicate energy savings and long-term value in a way that doesn't feel like a contractor sales pitch.</p>
+                </div>
+
+                <div>
+                    <h4>2. Lack of Installation Guidance</h4>
+                    <p>If one goal is reducing reliance on expensive HVAC labor, we needed to support user-driven installation. However, HVAC installation involves electrical safety, drilling, and sealed refrigerant lines. We had to balance empowerment with safety and feasibility.</p>
+                </div>
+            </section>
+
+            <section class="hvac-solution" id="hvac-sol">
+                <h2>Our Solutions</h2>
+
+                <div>
+                    <h4>Scan Your Home, in Seconds</h4>
+                    <p>We built a prototype allowing users to scan a room and view its 3D structure. This step validated that consumer-grade sensing was accurate enough for model generation.</p>
+                    <figure>
+                        <img src="/images/hvac-select-room.gif" alt="Selecting Room CAD File Animation">
+                        <figcaption style="font-size:0.9rem; color:#666; margin-top:6px;">
+                            Room Scanning Animation
+                        </figcaption>
+
+                    </figure>
+                </div>
+
+
+                <div>
+                    <h4>Drag, Drop, Done</h4>
+                    <p>We created a simple interface for dragging and placing heat-pump units inside the model. Early testers tried placing units too close to windows or corners, which showed us that the system needed built-in recommendations and warnings.</p>
+
+                    <figure>
+                        <img src="/images/hvac-placement-process1.gif" alt="Placement Process Animation">
+                        <figcaption style="font-size:0.9rem; color:#666; margin-top:6px;">
+                            Heat Pump Placement Animation
+                        </figcaption>
+
+                    </figure>
+                </div>
+
+                <div>
+                    <h4>The Model Does the Math</h4>
+                    <p>We integrated a basic optimization engine that suggests the number and type of heat-pump units based on room size and user-defined temperature preferences. This allowed us to generate a visual “optimized layout” rather than just letting users guess.</p>
+
+                    <figure>
+                        <img src="/images/hvac-checkout.gif" alt="Checking Out the Purchase">
+                        <figcaption style="font-size:0.9rem; color:#666; margin-top:6px;">
+                            Auto Checkout After Model Optimization
+                        </figcaption>
+
+                    </figure>
+                </div>
+
+                <div>
+                    <h4>AR: Your Personal HVAC Coach</h4>
+                    <p>We created an AR instruction layer showing exact mounting points, drilling guidance, and clearance requirements. </p>
+                    <p>Instead of a flat checklist, users receive spatial guidance, which is the same way Apple Vision Pro apps guide spatial setup. This approach turns a complex HVAC project into a step-by-step, visually guided task. </p>
+                    <p>While fully self-installation isn’t safe for refrigerant handling, the AR system helps homeowners prepare spaces, understand the installation path, and significantly reduce professional labor time.</p>
+                </div>
+            </section>
+
+            <section class="hvac-reflection" id="hvac-ref">
+                <h2>Reflection & Looking Forward</h2>
+                <div>
+                    <h4>Climate Tech Needs a Human Heart</h4>
+                    <p>This project taught me that climate solutions succeed when they speak human language, not just engineering language. Homeowners don’t just need kilowatt-hour charts and payback curves; they need certainty, transparency, and agency. By giving people the ability to “see” electrification before committing, we remove fear and build trust. And by adding AR-assisted installation, we lower cost barriers that make clean energy feel exclusive.</p>
+                </div>
+
+                <div>
+                    <h4>Turning Innovation Into Belief</h4>
+                    <p>My favorite part of this project wasn’t the technical stack, it was seeing technology become a bridge between innovation and community trust. Electrification isn’t just an engineering challenge; it’s a design challenge, a storytelling challenge, and a human-confidence challenge. This tool is one step toward making sustainable living intuitive and familiar, something everyone can picture in their own home.</p>
+                </div>
+
+                <figure>
+                    <!-- Source: original work by Benson Lyu -->
+                    <img src="/images/hvac-group-photo.jpg" alt="Group Photo at the End of Semester">
+                    <figcaption style="font-size:0.9rem; color:#666; margin-top:6px;">
+                        Group Photo After 2023 Final Exam at Cornell
+                    </figcaption>
+                </figure>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div>
+            <p>© 2025 Benson Lyu</p>
+            <p>Contact: zl298@cornell.edu</p>
+        </div>
+        <div class="social-links">
+
+            <div class="icon-wrap">
+                <a href="https://www.linkedin.com/in/bensonlyu" target="_blank">
+                    <img src="/images/linkedin-logo.png" alt="LinkedIn icon">
+                </a>
+            </div>
+
+            <div class="icon-wrap">
+                <a href="https://www.youtube.com/@bensonlyu9827" target="_blank">
+                    <img src="images/youtube-logo.png" alt="YouTube icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="/scripts/jquery-3.7.1.js"></script>
+    <script src="scripts/hamburger.js"></script>
+
+</body>
+
+</html>

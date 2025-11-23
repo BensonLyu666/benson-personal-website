@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benson Lyu</title>
+    <link rel="stylesheet" href="styles/site.css">
+</head>
+
+<body>
+
+
+    <header class="site-header">
+        <a href="index.html" class="logo">
+            <!-- Source: original work by Benson Lyu -->
+            <img src="/images/homepage-logo.png" alt="Benson Lyu" class="logo-img">
+        </a>
+        <nav class="nav-section">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="mymusic.html">MyMusic</a>
+        </nav>
+        <!-- adding new hamburger button -->
+        <button id="hamburger-btn" class="hamburger-btn">☰</button>
+
+        <nav id="hamburger-menu" class="hidden hamburger-menu">
+            <a href="index.html">Home</a>
+            <a href="smart-hvac.html">Project 1</a>
+            <a href="skymirror.html">Project 2</a>
+            <a href="goldman.html">Milestone</a>
+            <a href="about.html">About</a>
+            <a href="mymusic.html">MyMusic</a>
+        </nav>
+        <!-- adding new hamburger button -->
+    </header>
+
+
+    <div class="wide-main">
+        <nav class="toc-nav">
+            <ul>
+                <li><a href="#myIntro">Introduction</a></li>
+                <li><a href="#project1">Project 1</a></li>
+                <li><a href="#project2">Project 2</a></li>
+                <li><a href="#milestone">Milestone</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Hi! I'm Benson.</h1>
+            <h3 class="light-heading3" id="myIntro">To me, impact means decisions backed by data, technology built for people, and sustainability grounded in financial viability. </h3>
+
+            <section class="projects">
+                <h2>Featured Projects</h2>
+                <!-- Project Card1 -->
+                <article class="project-card1" id="project1">
+                    <!-- Source: original work by Benson Lyu -->
+                    <img src="images/hvac-homepage.gif" alt="Smart HVAC project image">
+                    <h3>Smart HVAC Optimization</h3>
+                    <p>Designing AI-powered home energy systems to accelerate heat-pump adoption and reduce 32% carbon emissions.</p>
+                    <a href="smart-hvac.html" class="btn">View Project</a>
+                </article>
+
+                <!-- Project Card2 -->
+                <article class="project-card2" id="project2">
+                    <!-- Source: original work by Benson Lyu -->
+                    <img src="images/skymirror-homepage.gif" alt="Plastic Cleaning Machine Operation Demo">
+                    <h3>Plastic Cleaning Machine: Skymirror</h3>
+                    <p> Designing 24/7 autonomous robot that collect floating, suspending plastic and reduce microplastic formation in marine environments.</p>
+                    <a href="skymirror.html" class="btn">View Project</a>
+                </article>
+
+                <!-- Project Card3 -->
+                <div class="project-card3" id="milestone">
+                    <!-- Source: CNBC -->
+                    <img src="images/gs-brian-singer.jpg" alt="Photo of Brian at CNBC news">
+                    <h3>Energy Investing in the Age of AI</h3>
+                    <p>Exploring how the energy transition reshapes global investment frameworks — conversation with Brian Singer from GS Sustain</p>
+                    <a href="goldman.html" class="btn">View Detail</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    <footer>
+        <div>
+            <p>© 2025 Benson Lyu</p>
+            <p>Contact: zl298@cornell.edu</p>
+        </div>
+        <div class="social-links">
+
+            <div class="icon-wrap">
+                <a href="https://www.linkedin.com/in/bensonlyu" target="_blank">
+                    <img src="/images/linkedin-logo.png" alt="LinkedIn icon">
+                </a>
+            </div>
+
+            <div class="icon-wrap">
+                <a href="https://www.youtube.com/@bensonlyu9827" target="_blank">
+                    <img src="images/youtube-logo.png" alt="YouTube icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="/scripts/jquery-3.7.1.js"></script>
+    <script src="scripts/hamburger.js"></script>
+
+</body>
+
+</html>

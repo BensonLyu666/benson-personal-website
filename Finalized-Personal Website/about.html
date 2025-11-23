@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benson Lyu</title>
+    <link rel="stylesheet" href="styles/site.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">
+            <!-- Source: original work by Benson Lyu -->
+            <img src="/images/homepage-logo.png" alt="Benson Lyu" class="logo-img">
+        </a>
+        <nav class="nav-section">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="mymusic.html">MyMusic</a>
+        </nav>
+
+        <!-- adding new hamburger button -->
+        <button id="hamburger-btn" class="hamburger-btn">☰</button>
+
+        <nav id="hamburger-menu" class="hidden hamburger-menu">
+            <a href="index.html">Home</a>
+            <a href="smart-hvac.html">Project 1</a>
+            <a href="skymirror.html">Project 2</a>
+            <a href="goldman.html">Milestone</a>
+            <a href="about.html">About</a>
+            <a href="mymusic.html">MyMusic</a>
+        </nav>
+        <!-- adding new hamburger button -->
+    </header>
+
+    <div class="wide-main">
+        <nav class="toc-nav">
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#uwc">My UWC Story</a></li>
+                <li><a href="#cornell">My Cornell Story</a></li>
+                <li><a href="#timeline">Leadership Experiences</a></li>
+                <li><a href="#awards">Honors & Competitions</a></li>
+                <li><a href="#persona">Life & Interests</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section class="about-intro" id="intro">
+                <figure>
+                    <!-- Source: original work by Benson Lyu -->
+                    <picture>
+                        <!-- 大屏幕用横图（rectangle） -->
+                        <source media="(min-width: 1000px)" srcset="images/about-mypic-rec.jpg">
+
+                        <!-- 小屏幕用正方形图（square） -->
+                        <source media="(max-width: 999px)" srcset="images/about-mypic-sqr.jpg">
+
+                        <!--确保永远有图 -->
+                        <img src="images/about-mypic-rec.jpg" alt="Benson Official Picture">
+                    </picture>
+                </figure>
+                <div>
+                    <h1>Hi! This is Benson —</h1>
+                    <h3>I'm currently an undergraduate at Cornell University double-majoring in Finance and Data Science. Before Cornell, I graduated from UWC Changshu China under the International Baccalaureate Diploma. These two academic homes shaped both my analytical foundation and my interest in bridging finance, technology, and sustainability to solve real-world problems.
+                    </h3>
+                </div>
+
+                <!-- adding modal -->
+                <button id="open-modal" class="modal-trigger">
+                    Show More About Me
+                </button>
+
+                <div id="modal-overlay" class="overlay hidden"></div>
+
+                <div id="simple-modal" class="modal hidden">
+                    <button id="close-modal" class="close-x-button">×</button>
+                    <h2>More About Me</h2>
+                    <p>I study Applied Economics & Management and Information Science at Cornell. My work focuses on sustainability, user-centered design, and data-driven decision-making. Read my resume for more detail.</p>
+                    <button id="resume-btn" class="modal-trigger">Resume</button>
+                    <picture id="resume-pic" class="resume-pic hidden">
+                        <img src="images/about-my-resume.png" alt="my resume 1 page">
+                    </picture>
+                </div>
+                <!-- adding modal -->
+
+                <div class="about-intro-logos">
+                    <figure>
+                        <img src="images/about-cornell-logo.png" alt="Cornell Logo">
+                    </figure>
+
+                    <figure>
+                        <img src="images/about-uwc-logo.png" alt="UWC Logo">
+                    </figure>
+
+                </div>
+            </section>
+
+            <section class="about-uwc-summary" id="uwc">
+                <h2>UWC — Foundations in Purpose. Growth in Practice.
+                </h2>
+                <p>At UWC, I learned in a community where cultures meet first through respect and curiosity. Surrounded by peers and mentors from around the world, I developed a mindset grounded in empathy, global citizenship, and purpose-driven learning.</p>
+
+                <p>"The dreamer who do" is the value I continue to carry at Cornell. Today, I’m passionate about building solutions that make clean-energy adoption easier, more data-driven, and more financially accessible for communities everywhere.</p>
+            </section>
+
+            <section class="about-cornell-summary" id="cornell">
+                <h2>Cornell University — Bridging Systems, Innovation, and Impact</h2>
+                <p>At Cornell, my double major brings business strategy together with technical execution. In the Dyson School of Applied Economics and Management, I study capital markets, energy-transition economics, and investment decision-making — learning how incentives, social trends, and capital flows shape the future of finance. In parallel, my Data Science coursework pushes me into prototyping, machine learning, and data-driven product design, which helped me to lead real projects that connect analytical insight to practical impact.</p>
+
+                <p>Beyond the classroom, Cornell’s pre-professional ecosystem accelerates the transition from theory to industry. Exposure to top finance and consulting firms through on-campus recruiting gives me early access to real deal-flows, market research, and problem-solving frameworks used in the field. I actively translate coursework in finance, modeling, and sustainability into the language and rigor of the professional world.</p>
+            </section>
+
+            <section class="timeline-section" id="timeline">
+                <h2 class="timeline-title">Leadership Through Curiosity, Discipline & Empathy</h2>
+
+                <div class="timeline">
+
+                    <!-- 2025 -->
+                    <div class="year-label">2025</div>
+
+                    <div class="entry">
+                        <div class="dot"></div>
+                        <h3>Workshop Participant @Point72</h3>
+                        <p>Built long/short equity strategy with factor screens and alternative data signals.</p>
+                    </div>
+
+                    <div class="entry">
+                        <div class="dot"></div>
+                        <h3>Early Programs @Goldman Sachs & Nomura</h3>
+                        <p>Completed markets and research training, analyst workshops, and industry mentorship.</p>
+                    </div>
+
+                    <div class="entry">
+                        <div class="dot"></div>
+                        <h3>Risk Analyst @Xiamen International Trust Fund</h3>
+                        <p>Evaluated trust portfolios and drafted exit strategies across diversified assets.</p>
+                    </div>
+
+                    <div class="entry">
+                        <div class="dot"></div>
+                        <h3>Quant Analyst @ Jiahe Xinsheng Private Equity</h3>
+                        <p>Built ML valuation models and back-tested momentum-based equity trading system.</p>
+                    </div>
+
+                    <!-- 2024 -->
+                    <div class="year-label">2024</div>
+
+                    <div class="entry">
+                        <div class="dot"></div>
+                        <h3>Cornell CUSD Sustainability Consultant</h3>
+                        <p>Contributed to electrification project; informed a ~7% carbon-reduction pilot strategy.</p>
+                    </div>
+
+                    <div class="entry">
+                        <div class="dot"></div>
+                        <h3>Energy Transition Club E-board</h3>
+                        <p>Led sessions on LCOE, grid electrification and clean-tech investing fundamentals.</p>
+                    </div>
+
+                    <!-- 2023 -->
+                    <div class="year-label">2023</div>
+
+                    <div class="entry">
+                        <div class="dot"></div>
+                        <h3>Ocean Research Intern @Xiamen University</h3>
+                        <p>Conducted microplastic toxin analysis and contributed to published marine ecology study.</p>
+                    </div>
+
+                    <div class="entry">
+                        <div class="dot"></div>
+                        <h3>Plastic-Collection Robot Lead</h3>
+                        <p>Led 23-student engineering team; built floating waste-collection robot with utility patent.</p>
+                    </div>
+
+                    <!-- 2022 -->
+                    <div class="year-label">2022</div>
+                    <div class="entry">
+                        <div class="dot"></div>
+                        <h3>YYGS - Solving Global Challenges Scholar</h3>
+                        <p>Developed sustainable-city model; earned Most Inspiring Project award.</p>
+                    </div>
+
+                    <div class="entry">
+                        <div class="dot"></div>
+                        <h3>Global Ocean Forum Speaker</h3>
+                        <p>Only student delegate at OTGA SEA; presented 30-minute marine sustainability framework.</p>
+                    </div>
+
+                    <div class="entry">
+                        <div class="dot"></div>
+                        <h3>Hackability Mentor</h3>
+                        <p>Guided 30+ students; co-designed assistive tools for visually and hearing-impaired users.</p>
+                    </div>
+
+                    <!-- 2021 -->
+                    <div class="year-label">2021</div>
+                    <div class="entry">
+                        <div class="dot"></div>
+                        <h3>Plastic 0% Club Founder</h3>
+                        <p>Built campus-wide recycling workflow and sustainable product initiative.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="awards">
+            <h2 class="about-awards-title">Honors & Competitions</h2>
+            <div class="table-wrap">
+                <table class="awards-table">
+                    <thead>
+                        <tr>
+                            <th>Competition</th>
+                            <th>Result</th>
+                            <th>Descriptions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Conrad Challenge</td>
+                            <td><strong>National 2nd + Best Innovation</strong></td>
+
+                            <td>Led marine-plastic solution; Top-2 among 20+ finalists.</td>
+                        </tr>
+                        <tr>
+                            <td>Peer Potential Mock Trial</td>
+                            <td><strong>National 2nd Place</strong></td>
+
+                            <td>Defense witness; ranked #2/28 finalist teams.</td>
+                        </tr>
+                        <tr>
+                            <td>Envirothon – Sustainability Innovation</td>
+                            <td><strong>Top 10% Award</strong></td>
+
+                            <td>Led research on pandemic mask microplastics.</td>
+                        </tr>
+                        <tr>
+                            <td>YOC – China Fishery Research</td>
+                            <td><strong>Top 14% Award</strong></td>
+
+                            <td>Pearl River policy study: biodiversity + fisher interviews.</td>
+                        </tr>
+                        <tr>
+                            <td>Steinway Junior Piano (China)</td>
+                            <td><strong>Finalist – 5th</strong></td>
+
+                            <td>Performed “Liuyang River” & Chopin Op.55 No.1.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+            <section class="persona-section" id="persona">
+                <h2>Beyond the Resume: Life in Motion & Music</h2>
+
+                <!-- Piano -->
+                <div class="persona-card">
+                    <!-- Source: original work by Benson Lyu -->
+                    <img src="/images/about-piano.png" alt="Benson playing piano" class="persona-img">
+                    <div class="persona-text">
+                        <span class="category">MUSIC</span>
+                        <h3>I’m a pianist.</h3>
+                        <p>
+                            15+ years from Chopin & Rachmaninoff to Bill Evans jazz voicings.
+
+                        </p>
+                        <p> Classical gave me discipline; jazz gave me freedom.
+                            Music remains my emotional reset and playground for creativity.</p>
+                    </div>
+                </div>
+
+                <!-- Sailing -->
+                <div class="persona-card">
+                    <!-- Source: original work by Benson Lyu -->
+                    <img src="/images/about-sailing.jpg" alt="Benson sailing" class="persona-img">
+                    <div class="persona-text">
+                        <span class="category">SAILING</span>
+                        <h3>I navigate by wind.</h3>
+                        <p>
+                            Raised by the coast, sailing taught me patience, risk-reading,
+                            and calm leadership in uncertainty.
+
+                        </p>
+                        <p>US Sailing certified; happiest on the water.</p>
+                    </div>
+                </div>
+
+                <!-- Ice Hockey -->
+                <div class="persona-card">
+                    <!-- Source: original work by Benson Lyu -->
+                    <img src="/images/about-hockey.jpg" alt="Benson ice hockey" class="persona-img">
+                    <div class="persona-text">
+                        <span class="category">ICE HOCKEY</span>
+                        <h3>I embrace collision sports.</h3>
+                        <p>
+                            Hockey keeps me sharp: fast decisions, trust, grit.
+
+                        </p>
+                        <p>Early-morning ice, fast skates, cold air — nothing compares.</p>
+                    </div>
+                </div>
+
+                <!-- Tree Climbing -->
+                <div class="persona-card">
+                    <!-- Source: original work by Benson Lyu -->
+                    <img src="images/about-tree-climb.jpg" alt="Benson tree climbing" class="persona-img">
+                    <div class="persona-text">
+                        <span class="category">TREE CLIMBING</span>
+                        <h3>I climb — literally.</h3>
+                        <p>
+                            What began as a quirky hobby became a love for nature and challenge.
+
+                        </p>
+                        <p>Rope-tangled problem-solving included — growth is vertical.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div>
+            <p>© 2025 Benson Lyu</p>
+            <p>Contact: zl298@cornell.edu</p>
+        </div>
+        <div class="social-links">
+
+            <div class="icon-wrap">
+                <a href="https://www.linkedin.com/in/bensonlyu" target="_blank">
+                    <img src="/images/linkedin-logo.png" alt="LinkedIn icon">
+                </a>
+            </div>
+
+            <div class="icon-wrap">
+                <a href="https://www.youtube.com/@bensonlyu9827" target="_blank">
+                    <img src="images/youtube-logo.png" alt="YouTube icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="/scripts/jquery-3.7.1.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/hamburger.js"></script>
+</body>
+
+</html>

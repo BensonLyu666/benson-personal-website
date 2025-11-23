@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benson Lyu</title>
+    <link rel="stylesheet" href="styles/site.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">
+            <!-- Source: original work by Benson Lyu -->
+            <img src="/images/homepage-logo.png" alt="Benson Lyu" class="logo-img">
+        </a>
+        <nav class="nav-section">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="mymusic.html">MyMusic</a>
+        </nav>
+
+        <!-- adding new hamburger button -->
+        <button id="hamburger-btn" class="hamburger-btn">☰</button>
+
+        <nav id="hamburger-menu" class="hidden hamburger-menu">
+            <a href="index.html">Home</a>
+            <a href="smart-hvac.html">Project 1</a>
+            <a href="skymirror.html">Project 2</a>
+            <a href="goldman.html">Milestone</a>
+            <a href="about.html">About</a>
+            <a href="mymusic.html">MyMusic</a>
+        </nav>
+        <!-- adding new hamburger button -->
+    </header>
+
+    <div class="wide-main">
+        <nav class="toc-nav">
+            <ul>
+                <li><a href="#music-classical">Classical</a></li>
+                <li><a href="#music-jazz">Jazz</a></li>
+                <li><a href="#music-film">Film & Stage</a></li>
+                <li><a href="#music-original">Original Compositions</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="music-section" id="mymusic">
+                <h2 class="music-title">Benson Lyu | Music Collections</h2>
+                <p class="music-sub">Classical interpretations, jazz improvisations, film themes, and original works.</p>
+
+                <!-- 1) Classical -->
+                <article class="music-block" id="music-classical">
+                    <figure>
+                        <img src="/images/MyMusic-classical.png" alt="Classical piano performance" class="music-img">
+                        
+                    </figure>
+                    <div class="music-text">
+                        <h3>Classical Interpretations</h3>
+                        <p>From Chopin’s Nocturnes to Liszt’s concert pieces—my approach focuses on clarity of voicing and narrative pacing. Highlights include <em>Hungarian Rhapsody No.2</em> and <em>Waltz Op.64 No.1</em>.</p>
+                    <a class="music-btn" 
+                    href="https://www.youtube.com/watch?v=_LG6YniBtYQ&list=PLBbcR6u494Xfvlsd7cxKHHHIL8OZKJT__&index=14" 
+                    target="_blank">Watch Playlist</a>
+                    </div>
+                </article>
+
+                <!-- 2) Jazz -->
+                <article class="music-block flip" id="music-jazz">
+                    <figure>
+                        <img src="images/MyMusic-bill-evans.jpeg" alt="Jazz trio rehearsal" class="music-img">
+                       
+                    </figure>
+                    <div class="music-text">
+                        <h3>Jazz & Improv</h3>
+                        <p>Standards and reharmonizations—swing feel, modal colors, and melodic improv. Check out <em>Autumn Leaves (trio)</em>, <em>Misty</em>, and my two-part “When Chopin Meets Swing.”</p>
+                    <a class="music-btn" 
+                    href="https://www.youtube.com/watch?v=RSi0luCDYo8&list=PLBbcR6u494Xfvlsd7cxKHHHIL8OZKJT__&index=4" 
+                    target="_blank">Watch Playlist</a>
+                    </div>
+                </article>
+
+                <!-- 3) Film & Stage -->
+                <article class="music-block" id="music-film">
+                    <figure>
+                        <img src="images/MyMusic-disney.jpg" alt="Performance of film music" class="music-img">
+                        
+                    </figure>
+                    <div class="music-text">
+                        <h3>Film & Stage Covers</h3>
+                        <p>Arrangements that balance fidelity and flair—Disney, La La Land, and Broadway favorites. Try <em>You’ve Got a Friend in Me</em> or <em>Another Day of Sun</em>.</p>
+                                        <a class="music-btn" href="https://www.youtube.com/watch?v=1cRoIKTHcBI&list=PLBbcR6u494Xfvlsd7cxKHHHIL8OZKJT__&index=1" target="_blank">Watch Playlist</a>
+                    </div>
+                </article>
+
+                <!-- 4) Originals -->
+                <article class="music-block flip" id="music-original">
+                    <figure>
+                        <!-- Source: original work by Benson Lyu -->
+                        <img src="images/MyMusic-orginal.PNG" alt="Original composition session" class="music-img">
+                        
+                    </figure>
+                    <div class="music-text">
+                        <h3>Originals & Album</h3>
+                        <p>Compositions that blend classical structure with jazz harmony. Don’t miss my album <em>The Seasons</em> and the UWC piece <em>Another Day of School</em>.</p>
+                                        <a class="music-btn" href="https://www.youtube.com/watch?v=4cmUJnSHqDg&list=PLBbcR6u494Xfvlsd7cxKHHHIL8OZKJT__&index=10" target="_blank">Watch Playlist</a>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div>
+            <p>© 2025 Benson Lyu</p>
+            <p>Contact: zl298@cornell.edu</p>
+        </div>
+        <div class="social-links">
+
+            <div class="icon-wrap">
+                <a href="https://www.linkedin.com/in/bensonlyu" target="_blank">
+                    <img src="/images/linkedin-logo.png" alt="LinkedIn icon">
+                </a>
+            </div>
+
+            <div class="icon-wrap">
+                <a href="https://www.youtube.com/@bensonlyu9827" target="_blank">
+                    <img src="images/youtube-logo.png" alt="YouTube icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="/scripts/jquery-3.7.1.js"></script>
+    <script src="scripts/hamburger.js"></script>
+
+</body>
+
+</html>

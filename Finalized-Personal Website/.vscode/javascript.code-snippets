@@ -1,0 +1,45 @@
+{
+  // Event snippets
+  "eventOnClick": {
+    "prefix": "event: click element",
+    "body": [ "$(\"${1:TODO: CSS selector}\").on(\"click\", function() { // ← click event\n\n  // ↓ action snippets ↓\n  ${2:TODO: action snippet(s)}\n  // ↑ action snippets ↑\n\n}); // ← click event\n\n$0" ],
+    "description": "Snippet: on click element event"
+  },
+  "eventOnPageReady": {
+    "prefix": "event: page ready",
+    "body": [ "$(document).ready(function() { // ← page ready event\n\n  // ↓ action snippets ↓\n  ${1:TODO: action snippet(s)}\n  // ↑ action snippets ↑\n\n}); // ← page ready event\n\n$0" ],
+    "description": "Snippet: on page ready event"
+  },
+  "eventOnWindowResize": {
+    "prefix": "event: resize browser window",
+    "body": [ "$(window).on(\"resize\", function() { // ← resize browser window event\n\n  // ↓ action snippets ↓\n  ${1:TODO: action snippet(s)}\n  // ↑ action snippets ↑\n\n}); // ← resize browser window event\n\n$0" ],
+    "description": "Snippet: on window resize event"
+  },
+
+  // Action Snippets
+  "actionAddCssClass": {
+    "prefix": "action: add css class",
+    "body": [ "$(\"${1:TODO: CSS selector}\").addClass(\"${2:TODO: CSS class name}\");\n$0" ],
+    "description": "Snippet: add a CSS class to an element"
+  },
+  "actionRemoveCssClass": {
+    "prefix": "action: remove css class",
+    "body": [ "$(\"${1:TODO: CSS selector}\").removeClass(\"${2:TODO: CSS class name}\");\n$0" ],
+    "description": "Snippet: remove a CSS class from an element"
+  },
+  "actionMediaQuery": {
+    "prefix": "action: browser narrow or wide",
+    "body": [ "if (window.matchMedia(\"(max-width: ${1:TODO: browser width})\").matches) { // ← get browser width\n\n  // ↓ action snippets (< width) ↓\n  ${2:TODO: action snippet(s)}\n  // ↑ action snippets (< width) ↑\n\n} else { // ← get browser width\n\n  // ↓ action snippets (> width) ↓\n  ${3:TODO: action snippet(s)}\n  // ↑ action snippets (> width) ↑\n\n} // ← get browser width\n$0" ],
+    "description": "javascript for media query inside event snippet"
+  },
+  "actionHasCssClass": {
+    "prefix": "action: element has css class",
+    "body": [ "if ($(\"${1:TODO: CSS selector}\").hasClass(\"${2:TODO: CSS class name}\")) { // ← element has css class\n\n  // ↓ action snippets (class on element) ↓\n  ${3:TODO: action snippet(s)}\n  // ↑ action snippets (class on element) ↑\n\n} else { // ← element has css class\n\n  // ↓ action snippets (class not on element) ↓\n  ${4:TODO: action snippet(s)}\n  // ↑ action snippets (class not on element) ↑\n\n} // ← element has css class\n\n$0" ],
+    "description": "Snippet: check if a CSS class exists on an element"
+  },
+  "actionConsoleLog": {
+    "prefix": "action: debug console message",
+    "body": [ "console.log(\"${1:TODO: test message}\")$0;" ],
+    "description": "Snippet: log a debugging message to the browser's console."
+  }
+}
