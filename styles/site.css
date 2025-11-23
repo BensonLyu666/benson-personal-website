@@ -145,7 +145,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3px;
+    gap: 1px;
     margin-top: 40px;
     font-size: 0.85rem;
     text-align: center;
